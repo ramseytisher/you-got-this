@@ -6,10 +6,9 @@
  */
 
 import React, { useState } from "react"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { Grommet, Box, Header, Heading, Footer, Text, Anchor } from "grommet"
-import { Run, Bike, Accessibility } from "grommet-icons"
+import { Grommet, Box, Main, Header, Heading, Footer, Text, Anchor } from "grommet"
+import { Run, Bike, Achievement } from "grommet-icons"
 
 const lightTheme = {
   global: {
@@ -17,10 +16,11 @@ const lightTheme = {
       brand: "#228BE6",
     },
     font: {
-      family: "Roboto",
+      family: "Indie Flower",
       size: "14px",
       height: "20px",
     },
+
   },
 }
 
@@ -39,24 +39,17 @@ const Layout = ({ children }) => {
         >
           <Run size="large" />
           <Bike size="large" />
-          <Accessibility size="large" />
+          <Achievement size="large" />
         </Box>
         <Heading>You Got This!!!</Heading>
       </Box>
-
-      <Box align="center" pad="small">
-        <main>{children}</main>
-      </Box>
+      <Main pad="small">{children}</Main>
       <Footer background="brand" pad="medium">
         <Anchor label="About" />
         <Text>Built by Ramsey</Text>
       </Footer>
     </Grommet>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout
