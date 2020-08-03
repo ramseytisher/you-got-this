@@ -28,12 +28,13 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `you-got-this`,
-        short_name: `starter`,
+        short_name: `You Got This`,
         start_url: `/`,
         background_color: `#0dbd28`,
         theme_color: `#0dbd28`,
