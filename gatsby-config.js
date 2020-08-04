@@ -10,7 +10,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Indie Flower"],
+          families: ["Roboto"],
         },
       },
     },

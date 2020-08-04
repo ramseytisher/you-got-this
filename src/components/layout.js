@@ -16,7 +16,7 @@ const lightTheme = {
       brand: "#228BE6",
     },
     font: {
-      family: "Indie Flower",
+      family: "Roboto",
       size: "14px",
       height: "20px",
     },
