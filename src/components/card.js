@@ -11,9 +11,9 @@ import {
   Layer,
   Clock,
 } from "grommet"
-import { Achievement } from "grommet-icons"
+import { Achievement, Cycle } from "grommet-icons"
 
-export default ({ exercise }) => {
+export default ({ exercise, refresh }) => {
   const [showLayer, setShowLayer] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
 
@@ -23,11 +23,20 @@ export default ({ exercise }) => {
   }
 
   return (
-    <Box direction="row" justify="between" pad={{ vertical: "small" }}>
-      <Box>
-        <Text>{exercise.description}</Text>
-        <Text size="small">{exercise.detail}</Text>
+    <Box
+      key={exercise.description}
+      direction="row"
+      justify="between"
+      pad={{ vertical: "small" }}
+    >
+      <Box direction="row" flex justify="between">
+        <Box>
+          <Text>{exercise.description}</Text>
+          <Text size="small">{exercise.detail}</Text>
+        </Box>
+        <Button icon={<Cycle />} onClick={refresh} key={exercise.description} />
       </Box>
+
       <Button label="Go" onClick={() => setShowLayer(true)} margin="xsmall" />
       {showLayer && (
         <Layer

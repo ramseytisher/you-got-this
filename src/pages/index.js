@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import { Box, Text, Button } from "grommet"
 
@@ -19,15 +19,22 @@ const IndexPage = () => {
     return available[random]
   }
 
+  const [stretch, setStretch] = useState(getExercise(0))
+  const [endurance, setEndurance] = useState(getExercise(1))
+  const [strength, setStrength] = useState(getExercise(2))
+  const [coordination, setCoordination] = useState(getExercise(3))
+  const [balance, setBalance] = useState(getExercise(4))
+  const [coolDown, setCoolDown] = useState(getExercise(5))
+
   return (
     <Layout>
-      <SEO title="Home" />
-      <Card exercise={getExercise(0)} />
-      <Card exercise={getExercise(1)} />
-      <Card exercise={getExercise(2)} />
-      <Card exercise={getExercise(3)} />
-      <Card exercise={getExercise(4)} />
-      <Card exercise={getExercise(5)} />
+      <SEO title="You Got This" />
+      <Card key="1" exercise={stretch} refresh={() => setStretch(getExercise(0))}/>
+      <Card key="2" exercise={endurance} refresh={() => setEndurance(getExercise(1))}/>
+      <Card key="3" exercise={strength} refresh={() => setStrength(getExercise(2))}/>
+      <Card key="4" exercise={coordination} refresh={() => setCoordination(getExercise(3))}/>
+      <Card key="5" exercise={balance} refresh={() => setBalance(getExercise(4))}/>
+      <Card key="6" exercise={coolDown} refresh={() => setCoolDown(getExercise(5))}/>
     </Layout>
   )
 }
