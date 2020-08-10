@@ -30,9 +30,9 @@ export default ({ exercise, refresh }) => {
       pad={{ vertical: "small" }}
     >
       <Box direction="row" flex justify="between">
-        <Box>
+        <Box justify="center">
           <Text>{exercise.description}</Text>
-          <Text size="small">{exercise.detail}</Text>
+          {exercise.detail && <Text size="small">{exercise.detail}</Text>}
         </Box>
         <Button icon={<Cycle />} onClick={refresh} key={exercise.description} />
       </Box>
