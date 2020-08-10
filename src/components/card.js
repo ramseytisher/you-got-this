@@ -34,7 +34,7 @@ export default ({ exercise, refresh }) => {
           <Text>{exercise.description}</Text>
           {exercise.detail && <Text size="small">{exercise.detail}</Text>}
         </Box>
-        <Button icon={<Cycle />} onClick={refresh} key={exercise.description} />
+        <Button icon={<Cycle />} onClick={refresh} />
       </Box>
 
       <Button label="Go" onClick={() => setShowLayer(true)} margin="xsmall" />

@@ -29,12 +29,12 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="You Got This" />
-      <Card key="1" exercise={stretch} refresh={() => setStretch(getExercise(0))}/>
-      <Card key="2" exercise={endurance} refresh={() => setEndurance(getExercise(1))}/>
-      <Card key="3" exercise={strength} refresh={() => setStrength(getExercise(2))}/>
-      <Card key="4" exercise={coordination} refresh={() => setCoordination(getExercise(3))}/>
-      <Card key="5" exercise={balance} refresh={() => setBalance(getExercise(4))}/>
-      <Card key="6" exercise={coolDown} refresh={() => setCoolDown(getExercise(5))}/>
+      <Card exercise={stretch} refresh={() => setStretch(getExercise(0))}/>
+      <Card exercise={endurance} refresh={() => setEndurance(getExercise(1))}/>
+      <Card exercise={strength} refresh={() => setStrength(getExercise(2))}/>
+      <Card exercise={coordination} refresh={() => setCoordination(getExercise(3))}/>
+      <Card exercise={balance} refresh={() => setBalance(getExercise(4))}/>
+      <Card exercise={coolDown} refresh={() => setCoolDown(getExercise(5))}/>
     </Layout>
   )
 }
